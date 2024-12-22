@@ -1,13 +1,7 @@
 import dotenv from "dotenv";
+import { Config } from "../types/types";
 
 dotenv.config();
-
-interface Config {
-  MONGODB_URI: string;
-  JWT_SECRET: string;
-  API_KEY: string;
-  PORT: string;
-}
 
 const config: Config = {
   MONGODB_URI: process.env.MONGODB_URI || "your-default-mongodb-uri",
